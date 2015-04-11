@@ -1,6 +1,7 @@
 //jQuery Sudoku Game
 // Author: William Wagner 
 //www.wagonmonster.com
+//yay!
 
 $(document).ready(function() {	
 	//loops through board and finds pre-populated cells and locks them
