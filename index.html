@@ -1,12 +1,12 @@
 <!doctype html>
 <head>
 	<title>jQuery Sudoku Game</title>
-	<meta name="viewport" content="width=352, initial-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=360, initial-scale=0.6, maximum-scale=0.6, user-scalable=yes">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 	<link href="css/sudoku.css" rel="stylesheet">
 </head>
 <body>
-	<main>
+	<div class="main">
 		<h1>SUDOKU</h1>
 		<h4>Built in jQuery by William Wagner</h4>
 		<p>
@@ -17,110 +17,110 @@
 			<span class="notfilled">There are still empty cells!</span>
 			<span class="completed">You're done!</span>
 		</p>
-		<table cellpadding="0" cellspacing="1" border="0">
+		<table cellpadding="0" cellspacing="1" border="0" align="center">
 			<tr>
 				<td><input type="number" value="" maxlength="1" class="sector1 row1 column1 keyrow keycolumn keysector alt"></td>
-				<td><input type="number" value="3" maxlength="1" class="sector1 row1 column2 keycolumn  alt" id="box2"></td>
-				<td><input type="number" value="" maxlength="1" class="sector1 row1 column3 keycolumn alt" id="box3"></td>
-				<td><input type="number" value="" maxlength="1" class="sector2 row1 column4 keycolumn keysector" id="box4"></td>
-				<td><input type="number" value="" maxlength="1" class="sector2 row1 column5 keycolumn" id="box5"></td>
-				<td><input type="number" value="6" maxlength="1" class="sector2 row1 column6 keycolumn" id="box6"></td>
-				<td><input type="number" value="" maxlength="1" class="sector3 row1 column7 keycolumn keysector alt" id="box7"></td>
-				<td><input type="number" value="7" maxlength="1" class="sector3 row1 column8 keycolumn alt" id="box8"></td>
-				<td><input type="number" value="" maxlength="1" class="sector3 row1 column9 keycolumn alt" id="box9"></td>
+				<td><input type="number" value="3" maxlength="1" class="sector1 row1 column2 keycolumn  alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector1 row1 column3 keycolumn alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector2 row1 column4 keycolumn keysector"></td>
+				<td><input type="number" value="" maxlength="1" class="sector2 row1 column5 keycolumn"></td>
+				<td><input type="number" value="6" maxlength="1" class="sector2 row1 column6 keycolumn"></td>
+				<td><input type="number" value="" maxlength="1" class="sector3 row1 column7 keycolumn keysector alt"></td>
+				<td><input type="number" value="7" maxlength="1" class="sector3 row1 column8 keycolumn alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector3 row1 column9 keycolumn alt"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="5" maxlength="1" class="sector1 row2 column1 keyrow alt" id="box10"></td>
-				<td><input type="number" value="" maxlength="1" class="sector1 row2 column2 alt" id="box11"></td>
-				<td><input type="number" value="" maxlength="1" class="sector1 row2 column3 alt" id="box12"></td>
-				<td><input type="number" value="3" maxlength="1" class="sector2 row2 column4" id="box13"></td>
-				<td><input type="number" value="" maxlength="1" class="sector2 row2 column5" id="box14"></td>
-				<td><input type="number" value="9" maxlength="1" class="sector2 row2 column6" id="box15"></td>
-				<td><input type="number" value="1" maxlength="1" class="sector3 row2 column7 alt" id="box16"></td>
-				<td><input type="number" value="" maxlength="1" class="sector3 row2 column8 alt" id="box17"></td>
-				<td><input type="number" value="8" maxlength="1" class="sector3 row2 column9 alt" id="box18"></td>
+				<td><input type="number" value="5" maxlength="1" class="sector1 row2 column1 keyrow alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector1 row2 column2 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector1 row2 column3 alt"></td>
+				<td><input type="number" value="3" maxlength="1" class="sector2 row2 column4"></td>
+				<td><input type="number" value="" maxlength="1" class="sector2 row2 column5"></td>
+				<td><input type="number" value="9" maxlength="1" class="sector2 row2 column6"></td>
+				<td><input type="number" value="1" maxlength="1" class="sector3 row2 column7 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector3 row2 column8 alt"></td>
+				<td><input type="number" value="8" maxlength="1" class="sector3 row2 column9 alt"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="" maxlength="1" class="sector1 row3 column1 keyrow alt" id="box19"></td>
-				<td><input type="number" value="" maxlength="1" class="sector1 row3 column2 alt" id="box20"></td>
-				<td><input type="number" value="" maxlength="1" class="sector1 row3 column3 alt" id="box21"></td>
-				<td><input type="number" value="4" maxlength="1" class="sector2 row3 column4" id="box22"></td>
-				<td><input type="number" value="1" maxlength="1" class="sector2 row3 column5" id="box23"></td>
-				<td><input type="number" value="" maxlength="1" class="sector2 row3 column6" id="box24"></td>
-				<td><input type="number" value="" maxlength="1" class="sector3 row3 column7 alt" id="box25"></td>
-				<td><input type="number" value="" maxlength="1" class="sector3 row3 column8 alt" id="box26"></td>
-				<td><input type="number" value="" maxlength="1" class="sector3 row3 column9 alt" id="box27"></td>
+				<td><input type="number" value="" maxlength="1" class="sector1 row3 column1 keyrow alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector1 row3 column2 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector1 row3 column3 alt"></td>
+				<td><input type="number" value="4" maxlength="1" class="sector2 row3 column4"></td>
+				<td><input type="number" value="1" maxlength="1" class="sector2 row3 column5"></td>
+				<td><input type="number" value="" maxlength="1" class="sector2 row3 column6"></td>
+				<td><input type="number" value="" maxlength="1" class="sector3 row3 column7 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector3 row3 column8 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector3 row3 column9 alt"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="2" maxlength="1" class="sector4 row4 column1 keyrow keysector" id="box28"></td>
-				<td><input type="number" value="4" maxlength="1" class="sector4 row4 column2" id="box29"></td>
-				<td><input type="number" value="" maxlength="1" class="sector4 row4 column3" id="box30"></td>
-				<td><input type="number" value="9" maxlength="1" class="sector5 row4 column4 alt keysector" id="box31"></td>
-				<td><input type="number" value="" maxlength="1" class="sector5 row4 column5 alt" id="box32"></td>
-				<td><input type="number" value="" maxlength="1" class="sector5 row4 column6 alt" id="box33"></td>
-				<td><input type="number" value="" maxlength="1" class="sector6 row4 column7 keysector" id="box34"></td>
-				<td><input type="number" value="" maxlength="1" class="sector6 row4 column8" id="box35"></td>
-				<td><input type="number" value="7" maxlength="1" class="sector6 row4 column9" id="box36"></td>
+				<td><input type="number" value="2" maxlength="1" class="sector4 row4 column1 keyrow keysector"></td>
+				<td><input type="number" value="4" maxlength="1" class="sector4 row4 column2"></td>
+				<td><input type="number" value="" maxlength="1" class="sector4 row4 column3"></td>
+				<td><input type="number" value="9" maxlength="1" class="sector5 row4 column4 alt keysector"></td>
+				<td><input type="number" value="" maxlength="1" class="sector5 row4 column5 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector5 row4 column6 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector6 row4 column7 keysector"></td>
+				<td><input type="number" value="" maxlength="1" class="sector6 row4 column8"></td>
+				<td><input type="number" value="7" maxlength="1" class="sector6 row4 column9"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="6" maxlength="1" class="sector4 row5 column1 keyrow" id="box37"></td>
-				<td><input type="number" value="" maxlength="1" class="sector4 row5 column2" id="box38"></td>
-				<td><input type="number" value="7" maxlength="1" class="sector4 row5 column3" id="box39"></td>
-				<td><input type="number" value="2" maxlength="1" class="sector5 row5 column4 alt" id="box40"></td>
-				<td><input type="number" value="5" maxlength="1" class="sector5 row5 column5 alt" id="box41"></td>
-				<td><input type="number" value="3" maxlength="1" class="sector5 row5 column6 alt" id="box42"></td>
-				<td><input type="number" value="9" maxlength="1" class="sector6 row5 column7" id="box43"></td>
-				<td><input type="number" value="" maxlength="1" class="sector6 row5 column8" id="box44"></td>
-				<td><input type="number" value="4" maxlength="1" class="sector6 row5 column9" id="box45"></td>
+				<td><input type="number" value="6" maxlength="1" class="sector4 row5 column1 keyrow"></td>
+				<td><input type="number" value="" maxlength="1" class="sector4 row5 column2"></td>
+				<td><input type="number" value="7" maxlength="1" class="sector4 row5 column3"></td>   
+				<td><input type="number" value="2" maxlength="1" class="sector5 row5 column4 alt"></td>
+				<td><input type="number" value="5" maxlength="1" class="sector5 row5 column5 alt"></td>
+				<td><input type="number" value="3" maxlength="1" class="sector5 row5 column6 alt"></td>
+				<td><input type="number" value="9" maxlength="1" class="sector6 row5 column7"></td>
+				<td><input type="number" value="" maxlength="1" class="sector6 row5 column8"></td>
+				<td><input type="number" value="4" maxlength="1" class="sector6 row5 column9"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="9" maxlength="1" class="sector4 row6 column1 keyrow" id="box46"></td>
-				<td><input type="number" value="" maxlength="1" class="sector4 row6 column2" id="box47"></td>
-				<td><input type="number" value="" maxlength="1" class="sector4 row6 column3" id="box48"></td>
-				<td><input type="number" value="" maxlength="1" class="sector5 row6 column4 alt" id="box49"></td>
-				<td><input type="number" value="" maxlength="1" class="sector5 row6 column5 alt" id="box50"></td>
-				<td><input type="number" value="4" maxlength="1" class="sector5 row6 column6 alt" id="box51"></td>
-				<td><input type="number" value="" maxlength="1" class="sector6 row6 column7" id="box52"></td>
-				<td><input type="number" value="3" maxlength="1" class="sector6 row6 column8" id="box53"></td>
-				<td><input type="number" value="2" maxlength="1" class="sector6 row6 column9" id="box54"></td>
+				<td><input type="number" value="9" maxlength="1" class="sector4 row6 column1 keyrow"></td>
+				<td><input type="number" value="" maxlength="1" class="sector4 row6 column2"></td>
+				<td><input type="number" value="" maxlength="1" class="sector4 row6 column3"></td>
+				<td><input type="number" value="" maxlength="1" class="sector5 row6 column4 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector5 row6 column5 alt"></td>
+				<td><input type="number" value="4" maxlength="1" class="sector5 row6 column6 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector6 row6 column7"></td>
+				<td><input type="number" value="3" maxlength="1" class="sector6 row6 column8"></td>
+				<td><input type="number" value="2" maxlength="1" class="sector6 row6 column9"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="" maxlength="1" class="sector7 row7 column1 keyrow keysector alt" id="box55"></td>
-				<td><input type="number" value="" maxlength="1" class="sector7 row7 column2 alt" id="box56"></td>
-				<td><input type="number" value="" maxlength="1" class="sector7 row7 column3 alt" id="box57"></td>
-				<td><input type="number" value="" maxlength="1" class="sector8 row7 column4 keysector" id="box58"></td>
-				<td><input type="number" value="4" maxlength="1" class="sector8 row7 column5" id="box59"></td>
-				<td><input type="number" value="2" maxlength="1" class="sector8 row7 column6" id="box60"></td>
-				<td><input type="number" value="" maxlength="1" class="sector9 row7 column7 alt keysector" id="box61"></td>
-				<td><input type="number" value="" maxlength="1" class="sector9 row7 column8 alt" id="box62"></td>
-				<td><input type="number" value="" maxlength="1" class="sector9 row7 column9 alt" id="box63"></td>
+				<td><input type="number" value="" maxlength="1" class="sector7 row7 column1 keyrow keysector alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector7 row7 column2 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector7 row7 column3 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector8 row7 column4 keysector"></td>
+				<td><input type="number" value="4" maxlength="1" class="sector8 row7 column5"></td>
+				<td><input type="number" value="2" maxlength="1" class="sector8 row7 column6"></td>
+				<td><input type="number" value="" maxlength="1" class="sector9 row7 column7 alt keysector"></td>
+				<td><input type="number" value="" maxlength="1" class="sector9 row7 column8 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector9 row7 column9 alt"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="7" maxlength="1" class="sector7 row8 column1 keyrow alt" id="box64"></td>
-				<td><input type="number" value="" maxlength="1" class="sector7 row8 column2 alt" id="box65"></td>
-				<td><input type="number" value="5" maxlength="1" class="sector7 row8 column3 alt" id="box66"></td>
-				<td><input type="number" value="6" maxlength="1" class="sector8 row8 column4" id="box67"></td>
-				<td><input type="number" value="" maxlength="1" class="sector8 row8 column5" id="box68"></td>
-				<td><input type="number" value="8" maxlength="1" class="sector8 row8 column6" id="box69"></td>
-				<td><input type="number" value="" maxlength="1" class="sector9 row8 column7 alt" id="box70"></td>
-				<td><input type="number" value="" maxlength="1" class="sector9 row8 column8 alt" id="box71"></td>
-				<td><input type="number" value="3" maxlength="1" class="sector9 row8 column9 alt" id="box72"></td>
+				<td><input type="number" value="7" maxlength="1" class="sector7 row8 column1 keyrow alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector7 row8 column2 alt"></td>
+				<td><input type="number" value="5" maxlength="1" class="sector7 row8 column3 alt"></td>
+				<td><input type="number" value="6" maxlength="1" class="sector8 row8 column4"></td>
+				<td><input type="number" value="" maxlength="1" class="sector8 row8 column5"></td>
+				<td><input type="number" value="8" maxlength="1" class="sector8 row8 column6"></td>
+				<td><input type="number" value="" maxlength="1" class="sector9 row8 column7 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector9 row8 column8 alt"></td>
+				<td><input type="number" value="3" maxlength="1" class="sector9 row8 column9 alt"></td>
 			</tr>
 			<tr>
-				<td><input type="number" value="" maxlength="1" class="sector7 row9 column1 keyrow alt" id="box73"></td>
-				<td><input type="number" value="9" maxlength="1" class="sector7 row9 column2 alt" id="box74"></td>
-				<td><input type="number" value="" maxlength="1" class="sector7 row9 column3 alt" id="box75"></td>
-				<td><input type="number" value="7" maxlength="1" class="sector8 row9 column4" id="box76"></td>
-				<td><input type="number" value="" maxlength="1" class="sector8 row9 column5" id="box77"></td>
-				<td><input type="number" value="" maxlength="1" class="sector8 row9 column6" id="box78"></td>
-				<td><input type="number" value="" maxlength="1" class="sector9 row9 column7 alt" id="box79"></td>
-				<td><input type="number" value="6" maxlength="1" class="sector9 row9 column8 alt" id="box80"></td>
-				<td><input type="number" value="" maxlength="1" class="sector9 row9 column9 alt" id="box81"></td>
+				<td><input type="number" value="" maxlength="1" class="sector7 row9 column1 keyrow alt"></td>
+				<td><input type="number" value="9" maxlength="1" class="sector7 row9 column2 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector7 row9 column3 alt"></td>
+				<td><input type="number" value="7" maxlength="1" class="sector8 row9 column4"></td>
+				<td><input type="number" value="" maxlength="1" class="sector8 row9 column5"></td>
+				<td><input type="number" value="" maxlength="1" class="sector8 row9 column6"></td>
+				<td><input type="number" value="" maxlength="1" class="sector9 row9 column7 alt"></td>
+				<td><input type="number" value="6" maxlength="1" class="sector9 row9 column8 alt"></td>
+				<td><input type="number" value="" maxlength="1" class="sector9 row9 column9 alt"></td>
 			</tr>
 		</table>
 		<button class="checkit">How Am I doing?</button>
 		<button class="completegame">I'm Done!</button>
-	</main>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/sudoku.js"></script>
 </body> 

@@ -23,7 +23,7 @@ p {
 }
 table {
 	background:#fff;
-	margin:10px 0 20px 0;
+	margin:10px auto 20px auto;
 	padding:0;
 	
 }
@@ -49,17 +49,22 @@ table td input {
 }
 table td input.alt {
 	background:#ddd;
-}
-table td input.prepopulated {
 	color:#000;
+}
+table td input.prepopulated{
+	color:#000 !important;
 	font-weight:bold;
+	opacity:1 !important;
+	-webkit-text-fill-color:#000;
 }
 table td input.playable {
 	color:#c30;
 }
-table td input.inerror {
+table td input.inerror,
+table td input.prepopulated.inerror {
 	background:red !important;
 	color:#fff;
+	-webkit-text-fill-color:#fff;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -82,6 +87,7 @@ p .notfilled, p .completed {
 }
 p .notfilled {
 	font-size:0.8em;
+	color:red;
 }
 p .completed {
 	color:#c30;

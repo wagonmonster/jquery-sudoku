@@ -21,6 +21,7 @@ $(document).ready(function() {
 	    if(valLength>maxCount){
 	        $(this).val($(this).val().substring(0,maxCount));
 	    }
+	    $(this).blur();
 	});
 	//"how Am I doing?" Button, fires the row, column and sector checkers
 	$('.checkit').click(function() {	
