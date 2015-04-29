@@ -9,7 +9,7 @@ As you can see, it's pre-populated with a static set of numbers, I plan on makin
 
 ## Motivation
 
-Code Test for a Job Interview
+For fun
 
 ## Installation
 
